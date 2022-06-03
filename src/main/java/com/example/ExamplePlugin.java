@@ -14,7 +14,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Helmet Check"
 )
 public class ExamplePlugin extends Plugin
 {
@@ -22,7 +22,7 @@ public class ExamplePlugin extends Plugin
 	private Client client;
 
 	@Inject
-	private ExampleConfig config;
+	private HelmetCheckConfig config;
 
 	@Override
 	protected void startUp() throws Exception
@@ -46,8 +46,8 @@ public class ExamplePlugin extends Plugin
 	}
 
 	@Provides
-	ExampleConfig provideConfig(ConfigManager configManager)
+	HelmetCheckConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(ExampleConfig.class);
+		return configManager.getConfig(HelmetCheckConfig.class);
 	}
 }
